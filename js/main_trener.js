@@ -1,22 +1,23 @@
-const arr = [2, 3, 3, 4, 5, 0, 0,];
-let evenNumbers = 0
-let oddNumbers = 0
-let zero = 0
 
-arr.forEach((item)=>{
-    claim(item)
-})    
-
-function claim(item) {
-    if (item !== 0) {
-        if (item % 2 == 0) {
-            evenNumbers++
-        } else{
-            oddNumbers++
-        }
-    }else {
-        zero++
-    }   
+const value = prompt('Введите число');
+let num = + value;
+if (num <= 1000) {
+    if (num > 2) {
+        isPrime(num);       
+    }else console.log('Данные не верны');
+} else {
+    console.log('Данные не верны');
 }
 
-console.log(`Чётные: ${evenNumbers}, Нечётные: ${oddNumbers}, Нули: ${zero}`)
+function isPrime(b) {   
+    for (let i = 2; i < b; i++) {
+        if (b % i === 0) {           
+           console.log("Число составное"); 
+           break
+        }else{
+            console.log("Число простое");
+        }       
+    }
+}
+
+

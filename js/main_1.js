@@ -1,24 +1,14 @@
 //Задание №1
-const arr = [2, 3, 3, 4, 5, 0, 0,];
-let evenNumbers = 0
-let oddNumbers = 0
-let zero = 0
-
-arr.forEach((item)=>{
-    claim(item)
-})    
-
-function claim(item) {
-    if (item !== 0) {
-        if (item % 2 == 0) {
-            evenNumbers++
-        } else{
-            oddNumbers++
-        }
-    }else {
-        zero++
-    }   
+const inputValue = prompt('Введите число')
+const value = +inputValue;
+if(typeof value == "number" && !isNaN(value)){
+if(value == 0) {
+console.log('ноль')
+} else if (value % 2 == 0){
+console.log('чётное')
+} else {
+console.log('нечётное')
 }
-
-console.log(`Чётные: ${evenNumbers}, Нечётные: ${oddNumbers}, Нули: ${zero}`)
-
+} else {
+console.log('Упс, кажется, вы ошиблись')
+}
