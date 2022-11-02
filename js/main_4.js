@@ -1,8 +1,11 @@
 //Задание №4
 
-function random(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+function func(a,b) {
+    setInterval(() => {
+        if (a !== b+1) {            
+            console.log(a)
+            a++
+        }
+    }, 1000);
 }
- console.log(random(0, 100))
+func(5, 15)
