@@ -1,12 +1,20 @@
 //Задание №2
- let a = 'a'
- let type = typeof a
- if (type === 'number') {
-    alert(`${a} - число`)
- } else if(type === 'string'){
-    alert(`${a} - строка`)
- }else if(type === 'boolean'){
-    alert(`${a} - логический тип`)
- }else{
-    alert('Тип x не определён')
- }
+const inputValue = prompt('Введите число');
+const b = +inputValue;
+
+function func(a) {    
+    if (a <= 1000 && a !== 0 && a !== 1) {
+        for (let index = 2; index < a; index++) {       
+            if (a % index === 0) {              
+               return console.log('Число не простое')
+            }else{
+                console.log('Число простое')
+            }     
+        }       
+    } else if (a === 1) {
+        console.log('Наименьшее натуральное число')
+    } else {
+        console.log('Данные неверны')
+    }  
+}
+func(b)

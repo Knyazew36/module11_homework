@@ -1,6 +1,8 @@
 //Задание №3
-a = prompt("Введите данные");
-function reverse(s){
-    return s.split("").reverse().join("");
+
+function sum(x) {
+    return function(y) {
+        return x + y;
+    };
 }
-console.log(reverse(s));
+console.log( sum(2)(6));
